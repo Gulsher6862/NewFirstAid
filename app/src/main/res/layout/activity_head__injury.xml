@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Covid19">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#FFECB3"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/backicon" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Covid-19 (Coronavirus)"
+                    android:textColor="#D61414"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                app:srcCompat="@drawable/headinjury" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/whatbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="What is head Injury?" />
+
+                <TextView
+                    android:id="@+id/whattxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Head injuries are one of the most common causes of disability and death in adults.\n\n The injury can be as mild as a bump, bruise (contusion), or cut on the head, or can be moderate to severe in nature due to a concussion, deep cut or open wound, fractured skull bone(s), or from internal bleeding and damage to the brain. \n\n
+
+A head injury is a broad term that describes a vast array of injuries that occur to the scalp, skull, brain, and underlying tissue and blood vessels in the head. Head injuries are also commonly referred to as brain injury, or traumatic brain injury (TBI), depending on the extent of the head trauma.
+
+Head injuries are rising dramatically--about 1.7 million people have a TBI each year. Millions of Americans are alive today who have had a head injury and now need help with the activities of daily living, costing the country more than $56 billion per year" />
+
+                <Button
+                    android:id="@+id/diffbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Different Types" />
+
+                <TextView
+                    android:id="@+id/difftxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" 1)Skull fracture: A skull fracture is a break in the skull bone. There are four major types of skull fractures, including the following: \n
+
+-Linear skull fractures: This is the most common type of skull fracture. In a linear fracture, there is a break in the bone, but it does not move the bone.\n These patients may be observed in the hospital for a brief amount of time, and can usually resume normal activities in a few days. Usually, no interventions are necessary. \n
+
+-Depressed skull fractures: This type of fracture may be seen with or without a cut in the scalp. In this fracture, part of the skull is actually sunken in from the trauma. This type of skull fracture may require surgical intervention, depending on the severity, to help correct the deformity./n\n 2) Intracranial hematoma (ICH):There are several types of ICH, or blood clots, in or around the brain. The different types are classified by their location in the brain. These can range from mild head injuries to quite serious and potentially life-threatening injuries. The different types of ICH include the following:\n
+
+-Epidural hematoma:Epidural hematomas occur when a blood clot forms underneath the skull, but on top of the dura, the tough covering that surrounds the brain. They usually come from a tear in an artery that runs just under the skull called the middle meningeal artery.\n -Epidural hematomas are usually associated with a skull fracture. \n
+
+-Subdural hematoma: Subdural hematomas occur when a blood clot forms underneath the skull and underneath the dura, but outside of the brain. These can form from a tear in the veins that go from the brain to the dura, or from a cut on the brain itself. They are sometimes, but not always, associated with a skull fracture. " />
+                <Button
+                    android:id="@+id/testbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Diagnostic tests" />
+
+                <TextView
+                    android:id="@+id/testtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" 1) Blood tests \n
+
+2)X-ray: A diagnostic test that uses invisible electromagnetic energy beams to produce images of internal tissues, bones, and organs onto film. \n
+
+3)Computed tomography scan (also called a CT or CAT scan). A diagnostic imaging procedure that uses a combination of X-rays and computer technology to produce horizontal, or axial, images (often called slices) of the body. A CT scan shows detailed images of any part of the body, including the bones, muscles, fat, and organs. CT scans are more detailed than general X-rays. \n
+
+4)Electroencephalogram (EEG) :A procedure that records the brain's continuous, electrical activity by means of electrodes attached to the scalp.\n
+
+5)Magnetic resonance imaging (MRI). A diagnostic procedure that uses a combination of large magnets, radiofrequencies, and a computer to produce detailed images of organs and structures within the body.\n" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+

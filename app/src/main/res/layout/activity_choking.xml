@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Choking">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#FFECB3"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/backicon" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Choking"
+                    android:textColor="#D61414"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                app:srcCompat="@drawable/chokiiii" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/whatbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="What is Choking?" />
+
+                <TextView
+                    android:id="@+id/whattxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Choking occurs when a foreign object lodges in the throat or windpipe, blocking the flow of air. In adults, a piece of food often is the culprit. Young children often swallow small objects. Because choking cuts off oxygen to the brain, give first aid as quickly as possible.\n" />
+
+                <Button
+                    android:id="@+id/diffbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="SYMPTOMS" />
+
+                <TextView
+                    android:id="@+id/difftxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="The universal sign for choking is hands clutched to the throat. If the person doesn't give the signal, look for these indications:\n
+\n
+ - Inability to talk\n
+ - Difficulty breathing or noisy breathing\n
+ - Squeaky sounds when trying to breathe\n
+ - Cough, which may either be weak or forceful\n
+ - Skin, lips and nails turning blue or dusky\n
+ - Skin that is flushed, then turns pale or bluish in color\n
+ - Loss of consciousness\n " />
+                <Button
+                    android:id="@+id/preventbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Preventions" />
+
+                <TextView
+                    android:id="@+id/testbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="If the person is able to cough forcefully, the person should keep coughing. If the person is choking and can't talk, cry or laugh forcefully, the American Red Cross recommends a five-and-five approach to delivering first aid:\n
+\n\n
+Give 5 back blows. Stand to the side and just behind a choking adult.
+ \nFor a child, kneel down behind. Place one arm across the person's chest for support.\n Bend the person over at the waist so that the upper body is parallel with the ground. \nDeliver five separate back blows between the person's shoulder blades with the heel of your hand.\n
+Give 5 abdominal thrusts. Perform five abdominal thrusts (also known as the Heimlich maneuver).\n
+Alternate between 5 blows and 5 thrusts until the blockage is dislodged.\n" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

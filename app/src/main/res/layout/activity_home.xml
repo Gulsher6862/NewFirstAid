@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+            android:background="#FFECB3"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/side" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingTop="5dp"
+                android:text="FIRST AID"
+                android:textColor="#D61414"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/covidpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    app:srcCompat="@drawable/virus" />
+
+                <ImageView
+                    android:id="@+id/asthmapic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/asthmapic" />
+
+                <ImageView
+                    android:id="@+id/bleedpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/blood" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="48dp">
+
+
+                <TextView
+                    android:id="@+id/covidtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="COVID-19"
+                    android:textColor="#070707" />
+
+                <TextView
+                    android:id="@+id/asthmatxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Asthma Attack"
+                    android:textColor="#090909" />
+
+                <TextView
+                    android:id="@+id/bleedingtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bleeding"
+                    android:textColor="#050505" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bonepic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    app:srcCompat="@drawable/bb" />
+
+                <ImageView
+                    android:id="@+id/chokingpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/choking" />
+
+                <ImageView
+                    android:id="@+id/burnpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/fire" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="48dp">
+
+                <TextView
+                    android:id="@+id/bonetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Broken Bone"
+                    android:textColor="#070707" />
+
+                <TextView
+                    android:id="@+id/chokingtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Choking"
+                    android:textColor="#090909" />
+
+                <TextView
+                    android:id="@+id/burnstxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Burns"
+                    android:textColor="#050505" />
+
+            </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/headpic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                app:srcCompat="@drawable/head" />
+
+            <ImageView
+                android:id="@+id/heartpic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/heartattack" />
+
+            <ImageView
+                android:id="@+id/allergypic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/allergy" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="48dp">
+
+            <TextView
+                android:id="@+id/headtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Head Injury"
+                android:textColor="#070707" />
+
+            <TextView
+                android:id="@+id/hearttxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Heart Attack"
+                android:textColor="#090909" />
+
+            <TextView
+                android:id="@+id/allergytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Allergies"
+                android:textColor="#050505" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/hypopic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                app:srcCompat="@drawable/hypothermia" />
+
+            <ImageView
+                android:id="@+id/diabeticpic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/sugar" />
+
+            <ImageView
+                android:id="@+id/heartpic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/heartstroke" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+                android:paddingBottom="50dp"
+                android:paddingLeft="48dp">
+
+            <TextView
+                android:id="@+id/hypotxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hypothermia"
+                android:textColor="#070707" />
+
+            <TextView
+                android:id="@+id/diabetictxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Diabetic Emergency"
+                android:textColor="#090909" />
+
+            <TextView
+                android:id="@+id/hearttxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Heart Stroke"
+                android:textColor="#050505" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Asthma">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#FFECB3"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/backicon" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Asthma Attack"
+                    android:textColor="#D61414"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                app:srcCompat="@drawable/ast" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/whatbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="What is Asthma Attack?" />
+
+                <TextView
+                    android:id="@+id/whattxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Asthma is a condition in which your airways narrow and swell and may produce extra mucus. This can make breathing difficult and trigger coughing, a whistling sound (wheezing) when you breathe out and shortness of breath.\n
+\n
+For some people, asthma is a minor nuisance. For others, it can be a major problem that interferes with daily activities and may lead to a life-threatening asthma attack.\n
+\n
+Asthma can't be cured, but its symptoms can be controlled. Because asthma often changes over time, it's important that you work with your doctor to track your signs and symptoms and adjust your treatment as needed.\n"/>
+                <Button
+                    android:id="@+id/diffbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="SYMPTOMS" />
+
+                <TextView
+                    android:id="@+id/difftxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Asthma symptoms vary from person to person. You may have infrequent asthma attacks, have symptoms only at certain times — such as when exercising — or have symptoms all the time.\n
+\n
+Asthma signs and symptoms include:\n
+\n
+ - Shortness of breath\n
+ - Chest tightness or pain\n
+ - Wheezing when exhaling, which is a common sign of asthma in children\n
+ - Trouble sleeping caused by shortness of breath, coughing or wheezing\n
+ - Coughing or wheezing attacks that are worsened by a respiratory virus, such as a cold or the flu\n
+Signs that your asthma is probably worsening include:\n
+\n
+ - Asthma signs and symptoms that are more frequent and bothersome\n
+ - Increasing difficulty breathing, as measured with a device used to check how well your lungs are working (peak flow meter)\n
+The need to use a quick-relief inhaler more often\n
+" />
+                <Button
+                    android:id="@+id/preventbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Preventions" />
+
+                <TextView
+                    android:id="@+id/testbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" Severe asthma attacks can be life-threatening. Work with your doctor to determine what to do when your signs and symptoms worsen — and when you need emergency treatment. Signs of an asthma emergency include:\n
+                    \n
+\n
+ - Rapid worsening of shortness of breath or wheezing\n
+ - No improvement even after using a quick-relief inhaler\n
+ - Shortness of breath when you are doing minimal physical activity\n
+
+Contact your doctor\n
+See your doctor:\n\n
+
+If you think you have asthma. If you have frequent coughing or wheezing that lasts more than a few days or any other signs or symptoms of asthma, see your doctor. Treating asthma early may prevent long-term lung damage and help keep the condition from getting worse over time.\n
+To monitor your asthma after diagnosis. If you know you have asthma, work with your doctor to keep it under control. Good long-term control helps you feel better from day to day and can prevent a life-threatening asthma attack.\n
+If your asthma symptoms get worse. Contact your doctor right away if your medication doesn't seem to ease your symptoms or if you need to use your quick-relief inhaler more often.\n
+\n
+Don't take more medication than prescribed without consulting your doctor first. Overusing asthma medication can cause side effects and may make your asthma worse.\n
+\n
+To review your treatment. Asthma often changes over time. Meet with your doctor regularly to discuss your symptoms and make any needed treatment adjustments.\n" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

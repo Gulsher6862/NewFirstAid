@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Bleeding">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#FFECB3"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/backicon" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Bleeding"
+                    android:textColor="#D61414"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                app:srcCompat="@drawable/bleed" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/whatbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="What to do in Bleeding?" />
+
+                <TextView
+                    android:id="@+id/whattxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="For severe bleeding, take these first-aid steps and reassure the injured person.\n
+\n
+Remove any clothing or debris on the wound. Don't remove large or deeply embedded objects. Don't probe the wound or attempt to clean it yet. Your first job is to stop the bleeding. Wear disposable protective gloves if available.\n
+Stop the bleeding. Place a sterile bandage or clean cloth on the wound. Press the bandage firmly with your palm to control bleeding. Apply constant pressure until the bleeding stops. Maintain pressure by binding the wound with a thick bandage or a piece of clean cloth. Don't put direct pressure on an eye injury or embedded object.\n
+\n
+Secure the bandage with adhesive tape or continue to maintain pressure with your hands. If possible, raise an injured limb above the level of the heart.\n
+\n
+Help the injured person lie down. If possible, place the person on a rug or blanket to prevent loss of body heat. Calmly reassure the injured person.\n
+Don't remove the gauze or bandage. If the bleeding seeps through the gauze or other cloth on the wound, add another bandage on top of it. And keep pressing firmly on the area.\n
+Tourniquets: A tourniquet is effective in controlling life-threatening bleeding from a limb. Apply a tourniquet if you're trained in how to do so. When emergency help arrives, explain how long the tourniquet has been in place.\n
+Immobilize the injured body part as much as possible. Leave the bandages in place and get the injured person to an emergency room as soon as possible.\n
+Call 911 or emergency medical help for severe bleeding that you can't control." />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

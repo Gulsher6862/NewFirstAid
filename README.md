@@ -1,1 +1,2 @@
-# NewFirstAid
+# FirstAid
+Internship Project
