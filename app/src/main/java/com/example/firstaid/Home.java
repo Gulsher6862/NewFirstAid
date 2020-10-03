@@ -131,11 +131,11 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        t8 = (TextView) findViewById(R.id.hearttxt);
+        t8 = (TextView) findViewById(R.id.hrtatk);
         t8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Covid19.class);
+                Intent intent = new Intent(Home.this,Heart_Attack.class);
                 startActivity(intent);
             }
         });
@@ -163,7 +163,7 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        t12 = (TextView) findViewById(R.id.hearttxt);
+        t12 = (TextView) findViewById(R.id.heartst);
         t12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
