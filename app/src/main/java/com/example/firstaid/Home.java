@@ -159,7 +159,7 @@ public class Home extends AppCompatActivity {
         t11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Covid19.class);
+                Intent intent = new Intent(Home.this,Diabetic_Emergency.class);
                 startActivity(intent);
             }
         });

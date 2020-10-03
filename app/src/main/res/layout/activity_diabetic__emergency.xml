@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Diabetic_Emergency">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="#FFECB3"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/backicon" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Diabetic"
+                    android:textColor="#D61414"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="235dp"
+                app:srcCompat="@drawable/diabetic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/whatbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="What is Diabetes?" />
+
+                <TextView
+                    android:id="@+id/whattxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" Diabetes is the condition in which the body does not properly process food for use as energy.
+Most of the food we eat is turned into glucose, or sugar, for our bodies to use for energy. The
+pancreas, an organ that lies near the stomach, makes a hormone called insulin to help
+glucose get into the cells of our bodies. When you have diabetes, your body either doesn't
+make enough insulin or can't use its own insulin as well as it should. This causes sugars to
+build up in your blood. This is why many people refer to diabetes as “sugar.”
+Diabetes can cause serious health complications including heart disease, blindness, kidney
+failure, and lower-extremity amputations. Diabetes is the seventh leading cause of death in
+the United States. .\n" />
+
+                <Button
+                    android:id="@+id/symtbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="SYMPTOMS" />
+
+                <TextView
+                    android:id="@+id/symttxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="People who think they might have diabetes must visit a physician for diagnosis. \nThey might
+have SOME or NONE of the following symptoms:
+- Frequent urination \n
+-Excessive thirst \n
+- Unexplained weight loss \n
+- Extreme hunger \n
+
+- Sudden vision changes \n
+- Tingling or numbness in hands or feet \n
+- Feeling very tired much of the time \n
+- Very dry skin \n
+- Sores that are slow to heal \n
+- More infections than usual \n
+
+Nausea, vomiting, or stomach pains may accompany some of these symptoms in the abrupt
+onset of insulin-dependent diabetes, now called Type 1 diabetes\n " />
+                <Button
+                    android:id="@+id/diagbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Diagnosis" />
+
+                <TextView
+                    android:id="@+id/diagtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" -Random blood sugar test :Blood sugar values are expressed in milligrams per deciliter (mg/dL) or millimoles per liter (mmol/L). \n Regardless of when you last ate, a blood sample showing that your blood sugar level is 200 mg/dL (11.1 mmol/L) or higher suggests diabetes, especially if you also have signs and symptoms of diabetes, such as frequent urination and extreme thirst.\n
+-Fasting blood sugar test: A blood sample is taken after an overnight fast. A reading of less than 100 mg/dL (5.6 mmol/L) is normal. A level from 100 to 125 mg/dL (5.6 to 6.9 mmol/L) is considered prediabetes.\n
+
+-If your fasting blood sugar is 126 mg/dL (7 mmol/L) or higher on two separate tests, you have diabetes.\n
+
+-Oral glucose tolerance test. This test is less commonly used than the others, except during pregnancy. You'll need to fast overnight and then drink a sugary liquid at the doctor's office. Blood sugar levels are tested periodically for the next two hours.\n
+
+A blood sugar level less than 140 mg/dL (7.8 mmol/L) is normal. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) indicates prediabetes. A reading of 200 mg/dL (11.1 mmol/L) or higher after two hours suggests diabetes. \n" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
