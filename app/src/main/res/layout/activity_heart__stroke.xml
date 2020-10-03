@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Heart_Stroke">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#FFECB3"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/backicon" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Heart-Stroke)"
+                    android:textColor="#D61414"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                app:srcCompat="@drawable/heartstr" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/whatbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="What is Heart-Stroke?" />
+
+                <TextView
+                    android:id="@+id/whattxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" A stroke happens when blood stops flowing to any part of your brain, damaging brain cells. The effects of a stroke depend on the part of the brain that was damaged and the amount of damage done. Knowing how your brain works can help you understand your stroke..\n" />
+
+                <Button
+                    android:id="@+id/symtomsbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="SYMPTOMS" />
+
+                <TextView
+                    android:id="@+id/symtomstxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="-FACE DROOPING
+Does one side of the face droop or is it numb? Ask the person to smile. \n
+
+-ARM WEAKNESS:
+Is one arm weak or numb? Ask the person to raise both arms. Does one arm drift downward?\n
+
+-SPEECH DIFFICULTY :
+Is speech slurred, are they unable to speak, or are they hard to understand? Ask the person to repeat a simple sentence, like the sky is blue \n
+
+-TIME TO CALL 9-1-1 :
+If the person shows any of these symptoms, even if the symptoms go away, call 9-1-1 and get them to the hospital immediately.\n " />
+                <Button
+                    android:id="@+id/diagnbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9A9A"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Diagnosis" />
+
+                <TextView
+                    android:id="@+id/diagntxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" -A physical exam :Your doctor will do a number of tests you're familiar with, such as listening to your heart and checking your blood pressure. You'll also have a neurological exam to see how a potential stroke is affecting your nervous system. \n
+-Blood tests :You may have several blood tests, including tests to check how fast your blood clots, whether your blood sugar is too high or low, and whether you have an infection. \n
+-Computerized tomography (CT) scan : A CT scan uses a series of X-rays to create a detailed image of your brain. A CT scan can show bleeding in the brain, an ischemic stroke, a tumor or other conditions. Doctors may inject a dye into your bloodstream to view your blood vessels in your neck and brain in greater detail (computerized tomography angiography).\n" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
