@@ -199,7 +199,7 @@
                 app:srcCompat="@drawable/head" />
 
             <ImageView
-                android:id="@+id/heartpic"
+                android:id="@+id/heartpc"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="20dp"

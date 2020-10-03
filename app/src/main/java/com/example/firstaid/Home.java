@@ -123,14 +123,36 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        headinjury = (ImageView)findViewById(R.id.headpic);
+        headinjury.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Head_Injury.class);
+                startActivity(intent);
+            }
+        });
+
         t7 = (TextView) findViewById(R.id.headtxt);
         t7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this,Head_Injury.class);
                 startActivity(intent);
+
             }
         });
+
+        heartattack = (ImageView)findViewById(R.id.heartpc);
+        heartattack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Heart_Attack.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         t8 = (TextView) findViewById(R.id.hrtatk);
         t8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,6 +161,17 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        allergy = (ImageView)findViewById(R.id.allergypic);
+        allergy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Allergies.class);
+                startActivity(intent);
+            }
+        });
+
         t9 = (TextView) findViewById(R.id.allergytxt);
         t9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,11 +180,30 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        hypothermia = (ImageView)findViewById(R.id.hypopic);
+        hypothermia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Hypothermia.class);
+                startActivity(intent);
+            }
+        });
+
         t10 = (TextView) findViewById(R.id.hypotxt);
         t10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this,Hypothermia.class);
+                startActivity(intent);
+            }
+        });
+
+        diabetic = (ImageView)findViewById(R.id.diabeticpic);
+        diabetic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Diabetic_Emergency.class);
                 startActivity(intent);
             }
         });
@@ -163,6 +215,16 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        heartstroke = (ImageView)findViewById(R.id.heartpic);
+        heartstroke.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Heart_Stroke.class);
+                startActivity(intent);
+            }
+        });
+
         t12 = (TextView) findViewById(R.id.heartst);
         t12.setOnClickListener(new View.OnClickListener() {
             @Override
