@@ -2,20 +2,31 @@ package com.example.firstaid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Hypothermia extends AppCompatActivity {
 
     Button bw,bsymp,brisk;
     TextView tw,tsymp,trisk;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hypothermia);
+        back = (ImageView) findViewById(R.id.imageView6);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Hypothermia.this,Home.class);
+                startActivity(intent);
+            }
+        });
         bw = (Button) findViewById(R.id.whatbtn);
         bw.setOnClickListener(new View.OnClickListener() {
             @Override
