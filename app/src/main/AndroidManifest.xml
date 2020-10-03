@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Burns"></activity>
+        <activity android:name=".Allergies"></activity>
+        <activity android:name=".Burns" />
         <activity android:name=".Choking" />
         <activity android:name=".Bone" />
         <activity android:name=".Bleeding" />

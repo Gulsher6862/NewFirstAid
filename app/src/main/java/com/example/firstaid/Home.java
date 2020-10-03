@@ -143,7 +143,7 @@ public class Home extends AppCompatActivity {
         t9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Covid19.class);
+                Intent intent = new Intent(Home.this,Allergies.class);
                 startActivity(intent);
             }
         });
