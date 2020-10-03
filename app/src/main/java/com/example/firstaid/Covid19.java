@@ -8,17 +8,17 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Covid19 extends AppCompatActivity {
-    Button bw,bs,bp;
+    Button btnw,btns,btnp;
     TextView tw,ts,tp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_covid19);
-        bw = (Button) findViewById(R.id.whatbtn);
-        bw.setOnClickListener(new View.OnClickListener() {
+        btnw = (Button) findViewById(R.id.whatbtn);
+        btnw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bw.setOnClickListener(new View.OnClickListener() {
+                btnw.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         tw.setVisibility(View.GONE);
@@ -29,11 +29,11 @@ public class Covid19 extends AppCompatActivity {
                 tp.setVisibility(View.GONE);
             }
         });
-        bs = (Button) findViewById(R.id.diffbtn);
-        bs.setOnClickListener(new View.OnClickListener() {
+        btns = (Button) findViewById(R.id.diffbtn);
+        btns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bs.setOnClickListener(new View.OnClickListener() {
+                btns.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         ts.setVisibility(View.GONE);
@@ -44,11 +44,11 @@ public class Covid19 extends AppCompatActivity {
                 tp.setVisibility(View.GONE);
             }
         });
-        bp = (Button) findViewById(R.id.preventbtn);
-        bp.setOnClickListener(new View.OnClickListener() {
+        btnp = (Button) findViewById(R.id.preventbtn);
+        btnp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bp.setOnClickListener(new View.OnClickListener() {
+                btnp.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         tp.setVisibility(View.GONE);
