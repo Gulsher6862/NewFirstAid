@@ -315,6 +315,74 @@
 
         </LinearLayout>
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/nosepic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    app:srcCompat="@drawable/nose" />
+
+                <ImageView
+                    android:id="@+id/poisonpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/toxic" />
+
+                <ImageView
+                    android:id="@+id/bitepic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/allerggg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="50dp"
+                android:paddingLeft="48dp">
+
+                <TextView
+                    android:id="@+id/nosetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nosebleed"
+                    android:textColor="#070707" />
+
+                <TextView
+                    android:id="@+id/poisontxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Poisoning"
+                    android:textColor="#090909" />
+
+                <TextView
+                    android:id="@+id/bitetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stings/bites"
+                    android:textColor="#050505" />
+
+            </LinearLayout>
+        </LinearLayout>
+
 
     </LinearLayout>
 

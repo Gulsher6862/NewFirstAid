@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
-    ImageView covid,asthma,bleeding,bone,choking,burns,headinjury,heartattack, allergy,hypothermia,diabetic,heartstroke;
-    TextView t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12;
+    ImageView covid,asthma,bleeding,bone,choking,burns,headinjury,heartattack, allergy,hypothermia,diabetic,heartstroke,nosebleed;
+    TextView t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -230,6 +230,24 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this,Heart_Stroke.class);
+                startActivity(intent);
+            }
+        });
+
+        nosebleed = (ImageView)findViewById(R.id.nosepic);
+        nosebleed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this,Nosebleed.class);
+                startActivity(intent);
+            }
+        });
+
+        t13 = (TextView) findViewById(R.id.nosetxt);
+        t13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this,Nosebleed.class);
                 startActivity(intent);
             }
         });
