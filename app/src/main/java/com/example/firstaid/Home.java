@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
-    ImageView covid,asthma,bleeding,bone,choking,burns,headinjury,heartattack, allergy,hypothermia,diabetic,heartstroke,nosebleed,poisoning;
-    TextView t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14;
+    ImageView covid,asthma,bleeding,bone,choking,burns,headinjury,heartattack, allergy,hypothermia,diabetic,heartstroke,nosebleed,poisoning,sting;
+    TextView t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -266,6 +266,24 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this,Poisoning.class);
+                startActivity(intent);
+            }
+        });
+
+        sting = (ImageView)findViewById(R.id.bitepic);
+        sting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this,Stings.class);
+                startActivity(intent);
+            }
+        });
+
+        t15 = (TextView) findViewById(R.id.bitetxt);
+        t15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Stings.class);
                 startActivity(intent);
             }
         });
