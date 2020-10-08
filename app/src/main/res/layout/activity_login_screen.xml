@@ -9,10 +9,11 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="60dp"
-        app:srcCompat="@drawable/logo" />
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/textView"
@@ -21,52 +22,55 @@
         android:gravity="center"
         android:text="First Aid "
         android:textAllCaps="true"
-        android:textColor="#FCD60A0A"
+        android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="20dp">
 
         <ImageView
-            android:id="@+id/call"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/call" />
+            android:id="@+id/email"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/gmail"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"/>
 
         <EditText
-            android:id="@+id/phonenum"
-            android:layout_width="wrap_content"
+            android:id="@+id/emailid"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="phone" />
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center_vertical"
+            android:hint="Email"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="20dp">
 
         <ImageView
             android:id="@+id/pserd"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/passwrd" />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/passwrd"
+            app:tint="@color/colorPrimary"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_gravity="center_vertical"
+            android:hint="Password"/>
 
     </LinearLayout>
 
@@ -76,19 +80,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:background="#DA2626"
+        android:background="@color/colorPrimary"
         android:text="LOGIN"
-        android:textColor="#FFFCFC"
+        android:textColor="@color/colorWhite"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/fgpwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Forgot Your Password ?"
         android:layout_marginTop="12dp"
-        android:textColor="#121010"
+        android:textColor="@color/colorBlack"
         android:textSize="14sp" />
 
     <TextView
@@ -98,7 +102,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="OR"
-        android:textColor="#BD3434" />
+        android:textColor="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/signup"
@@ -108,5 +112,16 @@
         android:gravity="center_horizontal"
         android:textSize="16dp"
         android:text="NEW USER ! SIGN UP HERE"
-        android:textColor="#000000" />
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/btnguest"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Guest"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
 </LinearLayout>
