@@ -238,8 +238,8 @@ public class Home extends AppCompatActivity {
         nosebleed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Nosebleed.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(Home.this,Nosebleed.class);
+                startActivity(intent);*/
             }
         });
 
@@ -247,8 +247,8 @@ public class Home extends AppCompatActivity {
         t13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Nosebleed.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(Home.this,Nosebleed.class);
+                startActivity(intent);*/
             }
         });
 
