@@ -60,7 +60,8 @@ public class LoginScreen extends AppCompatActivity {
         f1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(LoginScreen.this,ForgotPassword.class);
+                startActivity(intent);
             }
         });
         gstbtn.setOnClickListener(new View.OnClickListener() {
