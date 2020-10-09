@@ -66,7 +66,7 @@ public class LoginScreen extends AppCompatActivity {
         gstbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginScreen.this,Home.class));
+                startActivity(new Intent(LoginScreen.this,Dashboard.class));
             }
         });
 
@@ -89,7 +89,7 @@ public class LoginScreen extends AppCompatActivity {
                                 user = mAuth.getCurrentUser();
                                 b1.setEnabled(true);
                                 Toast.makeText(LoginScreen.this, "Login Success!", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(LoginScreen.this,Home.class));
+                                startActivity(new Intent(LoginScreen.this,Dashboard.class));
                                 finish();
                             } else {
                                 // If sign in fails, display a message to the user.
