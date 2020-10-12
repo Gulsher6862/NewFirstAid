@@ -80,8 +80,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Dashboard.this,Products.class);
-                startActivity(intent);
+
             }
         });
 
@@ -89,7 +88,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Dashboard.this,Products.class);
+                startActivity(intent);
             }
         });
     }
@@ -113,7 +113,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             finish();
         }
         else if (item.getItemId() == R.id.cart){
-
+            Intent intent = new Intent(Dashboard.this,CartScreen.class);
+            startActivity(intent);
         }
         return true;
     }
