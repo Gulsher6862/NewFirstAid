@@ -45,7 +45,8 @@ public class CartScreen extends AppCompatActivity {
         ctob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(CartScreen.this,AddressScreen.class);
+                startActivity(i);
             }
         });
 
