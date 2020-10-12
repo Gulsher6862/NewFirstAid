@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryDetails"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:navigationIcon="@drawable/back" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/progressLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="192dp">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ccc"/>
+
+                <ImageView
+                    android:id="@+id/playbtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/play"
+                    app:tint="@color/colorPrimary"
+                    android:visibility="gone"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+
+                <LinearLayout
+                    android:id="@+id/q1LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPink"
+                    android:layout_marginTop="10dp">
+
+                    <Button
+                        android:id="@+id/que1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPink"
+                        android:paddingLeft="10dp"
+                        android:text="What is Coronavirus?"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dropdown"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/que1txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.\n\n
+
+Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.\n
+\n
+The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.\n
+\n
+The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).\n
+\n
+At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available.\n"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/q2LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPink"
+                    android:layout_marginTop="10dp">
+
+                    <Button
+                        android:id="@+id/que2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPink"
+                        android:paddingLeft="10dp"
+                        android:text="Symptoms"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dropdown"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/que2txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.\n
+
+Most common symptoms:\n
+
+ - fever. \n
+ - dry cough.\n
+ - tiredness.\n
+Less common symptoms:\n
+
+ - aches and pains.\n
+ - sore throat.\n
+ - diarrhoea.\n
+ - conjunctivitis.\n
+ - headache.\n
+ - loss of taste or smell.\n
+ - a rash on skin, or discolouration of fingers or toes.\n
+Serious symptoms:\n
+
+ - difficulty breathing or shortness of breath.\n
+ - chest pain or pressure.\n
+ - loss of speech or movement.\n
+Seek immediate medical attention if you have serious symptoms.  Always call before visiting your doctor or health facility.\n
+\n
+People with mild symptoms who are otherwise healthy should manage their symptoms at home.\n
+\n
+On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.\n "
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/q3LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPink"
+                    android:layout_marginTop="10dp">
+
+                    <Button
+                        android:id="@+id/que3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPink"
+                        android:paddingLeft="10dp"
+                        android:text="Preventions"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dropdown"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/que3txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="To prevent infection and to slow transmission of COVID-19, do the following:\n
+\n
+ - Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.\n
+ - Maintain at least 1 metre distance between you and people coughing or sneezing.\n
+ - Avoid touching your face.\n
+ - Cover your mouth and nose when coughing or sneezing.\n
+ - Stay home if you feel unwell.\n
+ - Refrain from smoking and other activities that weaken the lungs.\n
+ -Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.\n"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

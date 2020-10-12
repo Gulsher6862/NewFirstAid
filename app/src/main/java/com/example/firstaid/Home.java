@@ -1,9 +1,11 @@
 package com.example.firstaid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.widget.ImageViewCompat;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,16 +14,29 @@ import android.widget.TextView;
 public class Home extends AppCompatActivity {
     ImageView covid,asthma,bleeding,bone,choking,burns,headinjury,heartattack, allergy,hypothermia,diabetic,heartstroke,nosebleed,poisoning,sting;
     TextView t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15;
-
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
+        }
+
         covid = (ImageView) findViewById(R.id.covidpic);
         covid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Covid19.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","covid");
                 startActivity(intent);
             }
         });
@@ -29,7 +44,8 @@ public class Home extends AppCompatActivity {
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Covid19.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","covid");
                 startActivity(intent);
             }
         });
@@ -38,7 +54,8 @@ public class Home extends AppCompatActivity {
         asthma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Asthma.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","asthma");
                 startActivity(intent);
             }
         });
@@ -47,7 +64,8 @@ public class Home extends AppCompatActivity {
         t2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Asthma.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","asthma");
                 startActivity(intent);
             }
         });
@@ -56,7 +74,8 @@ public class Home extends AppCompatActivity {
         bleeding.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Bleeding.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","bleeding");
                 startActivity(intent);
             }
         });
@@ -64,7 +83,8 @@ public class Home extends AppCompatActivity {
         t3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Bleeding.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","bleeding");
                 startActivity(intent);
             }
         });
@@ -73,7 +93,8 @@ public class Home extends AppCompatActivity {
         bone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Bone.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","bone");
                 startActivity(intent);
             }
         });
@@ -82,7 +103,8 @@ public class Home extends AppCompatActivity {
         t4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Bone.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","bone");
                 startActivity(intent);
             }
         });
@@ -91,7 +113,8 @@ public class Home extends AppCompatActivity {
         choking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Choking.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","choking");
                 startActivity(intent);
             }
         });
@@ -100,7 +123,8 @@ public class Home extends AppCompatActivity {
         t5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Choking.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","choking");
                 startActivity(intent);
             }
         });
@@ -110,7 +134,8 @@ public class Home extends AppCompatActivity {
         burns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Burns.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","burn");
                 startActivity(intent);
             }
         });
@@ -118,7 +143,8 @@ public class Home extends AppCompatActivity {
         t6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Burns.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","burn");
                 startActivity(intent);
             }
         });
@@ -127,7 +153,8 @@ public class Home extends AppCompatActivity {
         headinjury.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Head_Injury.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","head_injury");
                 startActivity(intent);
             }
         });
@@ -136,7 +163,8 @@ public class Home extends AppCompatActivity {
         t7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Head_Injury.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","head_injury");
                 startActivity(intent);
 
             }
@@ -146,7 +174,8 @@ public class Home extends AppCompatActivity {
         heartattack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Heart_Attack.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","heart_attack");
                 startActivity(intent);
             }
         });
@@ -157,7 +186,8 @@ public class Home extends AppCompatActivity {
         t8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Heart_Attack.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","heart_attack");
                 startActivity(intent);
             }
         });
@@ -167,7 +197,8 @@ public class Home extends AppCompatActivity {
         allergy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Allergies.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","allergy");
                 startActivity(intent);
             }
         });
@@ -176,7 +207,8 @@ public class Home extends AppCompatActivity {
         t9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Allergies.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","allergy");
                 startActivity(intent);
             }
         });
@@ -185,7 +217,8 @@ public class Home extends AppCompatActivity {
         hypothermia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Hypothermia.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","hypothermia");
                 startActivity(intent);
             }
         });
@@ -194,7 +227,8 @@ public class Home extends AppCompatActivity {
         t10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Hypothermia.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","hypothermia");
                 startActivity(intent);
             }
         });
@@ -203,7 +237,8 @@ public class Home extends AppCompatActivity {
         diabetic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Diabetic_Emergency.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","diabetic");
                 startActivity(intent);
             }
         });
@@ -211,7 +246,8 @@ public class Home extends AppCompatActivity {
         t11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Diabetic_Emergency.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","diabetic");
                 startActivity(intent);
             }
         });
@@ -220,7 +256,8 @@ public class Home extends AppCompatActivity {
         heartstroke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Heart_Stroke.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","heart_stroke");
                 startActivity(intent);
             }
         });
@@ -229,7 +266,8 @@ public class Home extends AppCompatActivity {
         t12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Heart_Stroke.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","heart_stroke");
                 startActivity(intent);
             }
         });
@@ -238,8 +276,9 @@ public class Home extends AppCompatActivity {
         nosebleed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(Home.this,Nosebleed.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","nose");
+                startActivity(intent);
             }
         });
 
@@ -247,8 +286,9 @@ public class Home extends AppCompatActivity {
         t13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(Home.this,Nosebleed.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","nose");
+                startActivity(intent);
             }
         });
 
@@ -256,7 +296,8 @@ public class Home extends AppCompatActivity {
         poisoning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Poisoning.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","poison");
                 startActivity(intent);
             }
         });
@@ -265,7 +306,8 @@ public class Home extends AppCompatActivity {
         t14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Poisoning.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","poison");
                 startActivity(intent);
             }
         });
@@ -274,7 +316,8 @@ public class Home extends AppCompatActivity {
         sting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,Stings.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","stings");
                 startActivity(intent);
             }
         });
@@ -283,7 +326,8 @@ public class Home extends AppCompatActivity {
         t15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Stings.class);
+                Intent intent = new Intent(Home.this, CategoryDetails.class);
+                intent.putExtra("category","stings");
                 startActivity(intent);
             }
         });
