@@ -40,7 +40,7 @@ public class Adapter  extends RecyclerView.Adapter<Adapter.ViewHolder>{
         holder.name.setText(list.get(position).getName());
         holder.price.setText("Price: $"+ list.get(position).getPrice());
         holder.desc.setText(list.get(position).getDesc());
-        //Glide.with(context).load(list.get(position).getImage()).into(holder.imageView);
+        Glide.with(context).load(list.get(position).getImage()).into(holder.imageView);
         
     }
 

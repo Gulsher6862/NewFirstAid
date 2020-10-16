@@ -56,11 +56,11 @@ public class CartScreen extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(CartScreen.this));
         recyclerView.setAdapter(adapter);
 
-        list.add(new product_model("1","Kit","","This is kit","99",""));
-        list.add(new product_model("1","Kit","","This is kit","99",""));
-        list.add(new product_model("1","Kit","","This is kit","99",""));
-        list.add(new product_model("1","Kit","","This is kit","99",""));
-        adapter.notifyDataSetChanged();
+        //list.add(new product_model("1","Kit","","This is kit","99",""));
+        //list.add(new product_model("1","Kit","","This is kit","99",""));
+        //list.add(new product_model("1","Kit","","This is kit","99",""));
+        //list.add(new product_model("1","Kit","","This is kit","99",""));
+        //adapter.notifyDataSetChanged();
 
     }
 }
