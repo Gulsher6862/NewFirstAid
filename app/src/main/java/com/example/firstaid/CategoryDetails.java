@@ -114,6 +114,62 @@ public class CategoryDetails extends AppCompatActivity {
             }
         });
 
+        getData();
 
+    }
+
+    private void getData() {
+
+        progress.setVisibility(View.VISIBLE);
+        db.collection("categories")
+                .document(getIntent().getStringExtra("category"))
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            toolbar.setTitle(document.get("title").toString());
+
+                            if (document.contains("que1")) {
+                                q1.setText(document.get("que1").toString());
+                                qt1.setText(document.get("que1txt").toString().replace("\\n", "\n"));
+                            }
+                            else {
+                                ll1.setVisibility(View.GONE);
+                            }
+
+                            if (document.contains("que2")) {
+                                q2.setText(document.get("que2").toString());
+                                qt2.setText(document.get("que2txt").toString().replace("\\n", "\n"));
+                            }
+                            else {
+                                ll2.setVisibility(View.GONE);
+                            }
+
+                            if (document.contains("que3")) {
+                                q3.setText(document.get("que3").toString());
+                                qt3.setText(document.get("que3txt").toString().replace("\\n", "\n"));
+                            }
+                            else {
+                                ll3.setVisibility(View.GONE);
+                            }
+
+                            Glide.with(CategoryDetails.this).load(document.get("img").toString()).into(imageView);
+
+                            /*if (document.contains("video_url")) {
+
+                                url = document.get("video_url").toString();
+                                pbtn.setVisibility(View.VISIBLE);
+
+                            }*/
+                            progress.setVisibility(View.GONE);
+
+                        } else {
+                            progress.setVisibility(View.GONE);
+                            Toast.makeText(CategoryDetails.this,task.getException().getLocalizedMessage(),Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
     }
 }
