@@ -80,7 +80,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Dashboard.this,QuizScreen.class);
+                startActivity(intent);
             }
         });
 
