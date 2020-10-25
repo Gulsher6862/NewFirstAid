@@ -1,7 +1,11 @@
 package com.example.firstaid;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -27,10 +32,12 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     NavigationView navigationView;
     Toolbar toolbar;
     TextView uname;
-    Button b1,b2,b3;
-
+    Button b1, b2, b3;
+    private static final int REQUEST_PHONE_CALL = 1;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,10 +45,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
-
-        drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
-        navigationView = (NavigationView)findViewById(R.id.nav_view);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -50,10 +56,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         toggle.syncState();
 
         uname = navigationView.getHeaderView(0).findViewById(R.id.mNavUserName);
-        if (mAuth.getCurrentUser()==null){
+        if (mAuth.getCurrentUser() == null) {
             navigationView.getMenu().clear();
-        }
-        else {
+        } else {
             db.collection("users")
                     .document(mAuth.getCurrentUser().getUid())
                     .get()
@@ -71,7 +76,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Dashboard.this,Home.class);
+                Intent intent = new Intent(Dashboard.this, Home.class);
                 startActivity(intent);
             }
         });
@@ -80,7 +85,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Dashboard.this,QuizScreen.class);
+                Intent intent = new Intent(Dashboard.this, QuizScreen.class);
                 startActivity(intent);
             }
         });
@@ -89,10 +94,60 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Dashboard.this,Products.class);
+                Intent intent = new Intent(Dashboard.this, Products.class);
                 startActivity(intent);
             }
         });
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.call_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.item_call) {
+
+            requestCall();
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case REQUEST_PHONE_CALL: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    requestCall();
+                }
+                else
+                {
+
+                }
+                return;
+            }
+        }
+    }
+
+    private void requestCall() {
+        String contact_number = "911";
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:" + contact_number));
+
+        try {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_PHONE_CALL);
+            } else {
+                startActivity(callIntent);
+            }
+        } catch (Exception e) {
+            // no activity to handle intent. show error dialog/toast whatever
+        }
     }
 
     @Override
