@@ -79,10 +79,10 @@ public class QuizScreen extends AppCompatActivity {
         customLayoutManager.setScrollEnabled(false);
         recyclerView.setAdapter(adapter);
 
-        list.add(new quiz_model("1","Question 1","","This is kit","99",""));
-        list.add(new quiz_model("1","Question 2","","This is kit","99",""));
-        list.add(new quiz_model("1","Question 3","","This is kit","99",""));
-        list.add(new quiz_model("1","Question 4","","This is kit","99",""));
+        list.add(new quiz_model("1","Why do you apply pressure to a wound that is bleeding?","To take the person's mind off their bleeding and stop them from feeling sick","To stop ot slow down the flow of blood","To reduce pain and risk of infection",""));
+        list.add(new quiz_model("1","Which of following could indicate that someone is having a heart attack?","Sweating","Sore toes","Pain in arms",""));
+        list.add(new quiz_model("1","You are at a family get together and your uncle starts complaining of severe crushing pains in his chest. Whose advice should you listen to?","Uncle Larry,Oh he will be alright, Let him rest for half an hour. It's probably just last night's dinner. ","Cousin Tim, Sit him down and call an ambulance right away","Nan, Just help him upstairs to lie down",""));
+        list.add(new quiz_model("1","You are in a busy cafe. You notice that a woman on the table next to you has stopped talking, is turning red and clutching her throat. You ask her if she is choking and she nods yes. She is panicking and can't breathe. What do you do next?","Encourage her to try and breathe through her nose","Help her drink some water","Hit her firmly on her back 5 times followed by 5 quick abdominal thrusts",""));
         adapter.notifyDataSetChanged();
     }
 
