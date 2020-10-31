@@ -74,21 +74,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:hint="Card Number" />
+                android:hint="Card Number"
+                android:inputType="number"
+                android:maxLength="16"/>
 
             <EditText
                 android:id="@+id/expdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:hint="Expiry Date" />
+                android:hint="Expiry Date (mm/yy)"
+                android:inputType="date"
+                android:maxLength="5"/>
 
             <EditText
                 android:id="@+id/cvv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:hint="CVV" />
+                android:hint="CVV"
+                android:inputType="number"
+                android:maxLength="3"/>
 
             <Button
                 android:id="@+id/btnorder"
