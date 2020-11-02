@@ -63,6 +63,8 @@ public class ProductQuantity extends AppCompatActivity {
             public void onClick(View view) {
                 if (mAuth.getCurrentUser()==null){
                     Toast.makeText(ProductQuantity.this,"Please login first!",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(ProductQuantity.this, LoginScreen.class);
+                    startActivity(intent);
                 }
                 else {
                     String quantity = qty.getText().toString().trim();

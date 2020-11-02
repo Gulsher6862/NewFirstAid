@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -58,6 +59,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         uname = navigationView.getHeaderView(0).findViewById(R.id.mNavUserName);
         if (mAuth.getCurrentUser() == null) {
             navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.guest_menu);
         } else {
             db.collection("users")
                     .document(mAuth.getCurrentUser().getUid())
@@ -85,8 +87,16 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Dashboard.this, QuizScreen.class);
-                startActivity(intent);
+                if (mAuth.getCurrentUser()==null) {
+                    Toast.makeText(Dashboard.this,"Please Login First To Take Quiz!",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Dashboard.this, LoginScreen.class);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(Dashboard.this, QuizScreen.class);
+                    startActivity(intent);
+
+                }
             }
         });
 
@@ -170,6 +180,14 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         }
         else if (item.getItemId() == R.id.cart){
             Intent intent = new Intent(Dashboard.this,CartScreen.class);
+            startActivity(intent);
+        }
+        else if (item.getItemId()==R.id.profile){
+            Intent intent = new Intent(Dashboard.this,UpdateProfile.class);
+            startActivity(intent);
+        }
+        else if (item.getItemId()==R.id.login){
+            Intent intent = new Intent(Dashboard.this,LoginScreen.class);
             startActivity(intent);
         }
         return true;

@@ -15,6 +15,7 @@
             android:name=".VideoScreen"
             android:screenOrientation="landscape" />
         <activity android:name=".QuizScreen" />
+        <activity android:name=".UpdateProfile" />
         <activity android:name=".AddressScreen" />
         <activity android:name=".ProductQuantity" />
         <activity android:name=".ForgotPassword" />

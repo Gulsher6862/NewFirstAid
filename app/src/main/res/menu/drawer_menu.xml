@@ -6,6 +6,11 @@
         android:icon="@drawable/cart"
         android:iconTint="@color/colorBlack"/>
 
+    <item android:id="@+id/profile"
+        android:title="Update Profile"
+        android:icon="@drawable/profile"
+        android:iconTint="@color/colorBlack"/>
+
     <item android:id="@+id/logout"
         android:title="Logout"
         android:icon="@drawable/logout"
