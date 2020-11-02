@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".QuizScreen"></activity>
+        <activity
+            android:name=".VideoScreen"
+            android:screenOrientation="landscape" />
+        <activity android:name=".QuizScreen" />
         <activity android:name=".AddressScreen" />
         <activity android:name=".ProductQuantity" />
         <activity android:name=".ForgotPassword" />

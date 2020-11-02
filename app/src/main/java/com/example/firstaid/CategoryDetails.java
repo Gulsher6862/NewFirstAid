@@ -114,6 +114,28 @@ public class CategoryDetails extends AppCompatActivity {
             }
         });
 
+        pbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (url!=null){
+                    Intent intent = new Intent(CategoryDetails.this,VideoScreen.class);
+                    intent.putExtra("url",url);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (url!=null){
+                    Intent intent = new Intent(CategoryDetails.this,VideoScreen.class);
+                    intent.putExtra("url",url);
+                    startActivity(intent);
+                }
+            }
+        });
+
         getData();
 
     }
@@ -157,12 +179,12 @@ public class CategoryDetails extends AppCompatActivity {
 
                             Glide.with(CategoryDetails.this).load(document.get("img").toString()).into(imageView);
 
-                            /*if (document.contains("video_url")) {
+                            if (document.contains("video_url")) {
 
                                 url = document.get("video_url").toString();
                                 pbtn.setVisibility(View.VISIBLE);
 
-                            }*/
+                            }
                             progress.setVisibility(View.GONE);
 
                         } else {
