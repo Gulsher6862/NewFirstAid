@@ -1,15 +1,24 @@
 package com.example.firstaid;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
@@ -23,11 +32,14 @@ public class QuizScreen extends AppCompatActivity {
     CustomLayoutManager customLayoutManager;
 
     int total_score = 0;
+
+    private FirebaseFirestore db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_screen);
-
+        db = FirebaseFirestore.getInstance();
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -69,6 +81,9 @@ public class QuizScreen extends AppCompatActivity {
                     },500);
                 }
                 else {
+                    Intent i = new Intent(QuizScreen.this,QuizScore.class);
+                    i.putExtra("total_score",total_score);
+                    startActivity(i);
                     finish();
                 }
             }
@@ -79,11 +94,24 @@ public class QuizScreen extends AppCompatActivity {
         customLayoutManager.setScrollEnabled(false);
         recyclerView.setAdapter(adapter);
 
-        list.add(new quiz_model("1","Why do you apply pressure to a wound that is bleeding?","To take the person's mind off their bleeding and stop them from feeling sick","To stop ot slow down the flow of blood","To reduce pain and risk of infection",""));
-        list.add(new quiz_model("1","Which of following could indicate that someone is having a heart attack?","Sweating","Sore toes","Pain in arms",""));
-        list.add(new quiz_model("1","You are at a family get together and your uncle starts complaining of severe crushing pains in his chest. Whose advice should you listen to?","Uncle Larry,Oh he will be alright, Let him rest for half an hour. It's probably just last night's dinner. ","Cousin Tim, Sit him down and call an ambulance right away","Nan, Just help him upstairs to lie down",""));
-        list.add(new quiz_model("1","You are in a busy cafe. You notice that a woman on the table next to you has stopped talking, is turning red and clutching her throat. You ask her if she is choking and she nods yes. She is panicking and can't breathe. What do you do next?","Encourage her to try and breathe through her nose","Help her drink some water","Hit her firmly on her back 5 times followed by 5 quick abdominal thrusts",""));
-        adapter.notifyDataSetChanged();
+        getQuiz();
+    }
+
+    private void getQuiz() {
+        db.collection("quiz").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                for (QueryDocumentSnapshot document : task.getResult()) {
+                    list.add(new quiz_model(document.getId(),
+                            document.get("que").toString(),
+                            document.get("opt1").toString(),
+                            document.get("opt2").toString(),
+                            document.get("opt3").toString(),
+                            document.get("ans").toString()));
+                }
+                adapter.notifyDataSetChanged();
+            }
+        });
     }
 
     public class CustomLayoutManager extends LinearLayoutManager {
