@@ -68,7 +68,16 @@ public class CartScreen extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         list = new ArrayList<>();
-        adapter = new Adapter(list,getApplicationContext());
+        adapter = new Adapter(list, getApplicationContext(), true, new Adapter.CartSelection() {
+            @Override
+            public void onDelete(int position) {
+                db.collection("cart").document(list.get(position).getCart_id()).delete();
+                carttotal = carttotal - Integer.parseInt(list.get(position).getTotal_prize());
+                tt.setText("Total: $"+carttotal);
+                list.remove(position);
+                adapter.notifyDataSetChanged();
+            }
+        });
         recyclerView.setLayoutManager(new LinearLayoutManager(CartScreen.this));
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
