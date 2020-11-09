@@ -6,6 +6,11 @@
         android:icon="@drawable/cart"
         android:iconTint="@color/colorBlack"/>
 
+    <item android:id="@+id/order"
+        android:title="Your Orders"
+        android:icon="@drawable/order_list"
+        android:iconTint="@color/colorBlack"/>
+
     <item android:id="@+id/profile"
         android:title="Update Profile"
         android:icon="@drawable/profile"

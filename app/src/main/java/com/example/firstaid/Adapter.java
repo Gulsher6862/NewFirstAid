@@ -21,12 +21,19 @@ public class Adapter  extends RecyclerView.Adapter<Adapter.ViewHolder>{
     private Context context;
     private View.OnClickListener listener;
     private boolean isCart = false;
+    private boolean isOrder = false;
 
     @NonNull
     private CartSelection cartSelection;
     public Adapter(ArrayList<product_model> list, Context context) {
         this.list = list;
         this.context = context;
+    }
+
+    public Adapter(ArrayList<product_model> list, Context context, boolean isOrder) {
+        this.list = list;
+        this.context = context;
+        this.isOrder = isOrder;
     }
 
     public Adapter(ArrayList<product_model> list, Context context, boolean isCart, CartSelection cartSelection) {
@@ -50,6 +57,10 @@ public class Adapter  extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
         if (isCart) {
             holder.remove_btn.setVisibility(View.VISIBLE);
+            holder.price.setText("Price: $"+ list.get(position).getTotal_prize());
+            holder.desc.setText("Qty: "+list.get(position).getQuantity());
+        }
+        else if (isOrder) {
             holder.price.setText("Price: $"+ list.get(position).getTotal_prize());
             holder.desc.setText("Qty: "+list.get(position).getQuantity());
         }

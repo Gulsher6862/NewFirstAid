@@ -182,6 +182,10 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             Intent intent = new Intent(Dashboard.this,CartScreen.class);
             startActivity(intent);
         }
+        else if (item.getItemId() == R.id.order){
+            Intent intent = new Intent(Dashboard.this,OrderScreen.class);
+            startActivity(intent);
+        }
         else if (item.getItemId()==R.id.profile){
             Intent intent = new Intent(Dashboard.this,UpdateProfile.class);
             startActivity(intent);
