@@ -44,7 +44,7 @@ public class QuizScore extends AppCompatActivity {
         }
 
         score = findViewById(R.id.score);
-        score.setText(String.valueOf(getIntent().getIntExtra("total_score",0)));
+        score.setText(getIntent().getIntExtra("total_score",0)+"/"+getIntent().getIntExtra("total_ques",0));
 
     }
 }

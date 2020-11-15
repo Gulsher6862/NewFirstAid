@@ -83,6 +83,7 @@ public class QuizScreen extends AppCompatActivity {
                 else {
                     Intent i = new Intent(QuizScreen.this,QuizScore.class);
                     i.putExtra("total_score",total_score);
+                    i.putExtra("total_ques",list.size());
                     startActivity(i);
                     finish();
                 }

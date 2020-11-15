@@ -12,7 +12,7 @@
         android:iconTint="@color/colorBlack"/>
 
     <item android:id="@+id/profile"
-        android:title="Update Profile"
+        android:title="Profile"
         android:icon="@drawable/profile"
         android:iconTint="@color/colorBlack"/>
 

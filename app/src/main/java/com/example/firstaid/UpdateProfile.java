@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,9 +31,11 @@ public class UpdateProfile extends AppCompatActivity {
 
     Toolbar toolbar;
     EditText name, age, phone, password;
-    Button update;
+    Button update, upbtn;
     String user_email;
-
+    TextView uname, uemail, uphone, uage;
+    LinearLayout profile_ll;
+    ScrollView update_ll;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
@@ -57,6 +62,12 @@ public class UpdateProfile extends AppCompatActivity {
         age = findViewById(R.id.agetext);
         phone = findViewById(R.id.phonenum);
         password = findViewById(R.id.password);
+        update_ll = findViewById(R.id.update_ll);
+        profile_ll = findViewById(R.id.profile_ll);
+        uname = findViewById(R.id.name);
+        uage = findViewById(R.id.age);
+        uphone = findViewById(R.id.phone);
+        uemail = findViewById(R.id.email);
 
         update = findViewById(R.id.btnupdate);
 
@@ -73,6 +84,16 @@ public class UpdateProfile extends AppCompatActivity {
             }
         });
 
+        upbtn = findViewById(R.id.upbtn);
+
+        upbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profile_ll.setVisibility(View.GONE);
+                update_ll.setVisibility(View.VISIBLE);
+            }
+        });
+
         db.collection("users")
                 .document(mAuth.getCurrentUser().getUid())
                 .get()
@@ -85,6 +106,11 @@ public class UpdateProfile extends AppCompatActivity {
                         phone.setText(document.get("phone").toString());
                         password.setText(document.get("password").toString());
                         user_email = document.get("email").toString();
+
+                        uname.setText(document.get("username").toString());
+                        uage.setText(document.get("age").toString());
+                        uemail.setText(document.get("email").toString());
+                        uphone.setText(document.get("phone").toString());
                     }
                 });
     }
